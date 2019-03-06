@@ -6,8 +6,12 @@ import './index.css';
 const PokemonList = (props) => {
 		
 		const pokemonComponents = props.pokemonList && props.pokemonList.map(pokemon => (
-			<Pokemon pokemon={pokemon} key={pokemon.name}/>
+			<Pokemon onPokemonClick={()=> handlePokemonClick(pokemon.name)} pokemon={pokemon} key={pokemon.name}/>
 		))
+
+		const handlePokemonClick = name => {
+			props.getOnePokemon(name);
+		}
 
         return (
         	<div className="list">

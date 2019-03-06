@@ -9,11 +9,11 @@ class PokemonListContainer extends Component {
 	imprimir(datos){
 		console.log(datos);
 	}
-
+    
     render() {
         return (
         	<div className="continue">
-	           <PokemonDetail/>
+	           <PokemonDetail pokemon={this.props.pokemon}/>
             </div>
         );
     }
@@ -21,7 +21,7 @@ class PokemonListContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-
+pokemon: state.pokemonListReducer.selectedPokemon
 });
 
 const mapDispatchToProps = dispatch => ({

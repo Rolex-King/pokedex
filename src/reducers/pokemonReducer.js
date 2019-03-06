@@ -1,4 +1,4 @@
-import { FETCH_POKEMON } from '../actions/PokemonActions';
+import { FETCH_POKEMON, FETCH_ONE } from '../actions/PokemonActions';
 
 const initialState = {
 	pokemonList: []
@@ -10,8 +10,10 @@ export const pokemonListReducer = (state = initialState, action) =>{
 		case FETCH_POKEMON:
 			return {...state, pokemonList: action.payload}
 
-		default:
+		case FETCH_ONE:
+			return {...state, selectedPokemon: action.payload}
 
+		default:
 			return state;
 	}
 

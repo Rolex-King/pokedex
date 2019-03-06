@@ -1,5 +1,5 @@
 .detailContainer{
-border-style: solid;
+  border-style: solid;
   border-width: 2px 3px 4px 3px;
   background-color: orange;
   width: calc(100% - 1px);;
@@ -18,4 +18,12 @@ background: -o-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, 
 background: -ms-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(19,19,19,1) 100%);
 background: linear-gradient(to right, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(19,19,19,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+}
+
+.imageBox {
+	height: 300px;
+	width: 450px;
+	background-color: orange;
+	border-style: solid ;
+ 	border-width: 2px 2px 4px 3px;
 }
