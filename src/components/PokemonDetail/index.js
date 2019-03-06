@@ -1,6 +1,15 @@
 import React from 'react';
 import './index.css';
-import {Grid,Row,Col} from 'react-flexbox-grid';
+import {Row,Col} from 'react-flexbox-grid';
+import { getColor} from '../../services/pokemonService';
+
+
+const mapTypesToDiv = types =>{
+	
+	return  types.map(type=>{
+		const color = getColor(type.type.name);
+	 return <Col xs={4} key={type.type.name} className="pokeType" style={{backgroundColor: color}}>{type.type.name}</Col>
+	 })}
 
 
 const PokemonDetail = (props) => {
@@ -17,8 +26,16 @@ const PokemonDetail = (props) => {
     			</Row>
 			</Col>
 		</Row>
+
+		<Row around="xs">
+		{props.pokemon ? mapTypesToDiv(props.pokemon.data.types) : "Cargando"}		
+		</Row>
+
 		</div>
 	)
 }
 
+/*
+ props.pokemon.data.types[0].type.name
+*/
 export default PokemonDetail;

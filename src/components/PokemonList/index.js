@@ -19,7 +19,6 @@ const PokemonList = (props) => {
 	            { props.pokemonList !== undefined ? pokemonComponents : <h2>Esta vacio</h2> }
             </div>
         );
-    
 }
 
 export default PokemonList;
