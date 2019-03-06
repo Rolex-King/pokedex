@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import {Grid,Row,Col} from 'react-flexbox-grid';
+import PokemonListContainer  from './containers/PokemonListContainer'; 
+import PokemonDetailContainer from './containers/PokemonDetailContainer';
+//<header className="App-header"><img src={logo} className="App-logo" alt="logo" /></header>
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <Grid>
+      	<Row>
+      		<Col xs={6} md={4}>
+      			<PokemonListContainer className="continue"/>
+      		</Col>
+      		<Col xs={12} md={8}>
+      			<PokemonDetailContainer className="continue"/>
+      		</Col>
+		</Row>
+
+      </Grid>
+        
       </div>
     );
   }

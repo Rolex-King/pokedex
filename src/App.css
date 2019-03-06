@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+
+.pokemonList {
+  border-style: solid;
+  border-width: 2px 3px 4px 3px;
+  background-color: blue;
+  width: 500px;
+  max-height:500px;
+  overflow: auto;
+  margin-top: 180px;
+}
+
+.continue {
+  display: inline;
+}
