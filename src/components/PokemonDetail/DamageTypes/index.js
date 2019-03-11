@@ -2,13 +2,6 @@
 import React, { Component } from 'react';
 import getTypeInfo from './../../../services/getTypeInfo';
 
-/*
-const DamageTable = data => {
-	return (
-		
-	);
-}
-*/
 
 class DamageTypes extends Component {
 

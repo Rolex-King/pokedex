@@ -11,10 +11,9 @@ const mapTypesToDiv = types =>{
 		const color = getColor(type.type.name);
 	 return <Col xs={5} key={type.type.name} className="pokeType" style={{backgroundColor: color}}>
 	 {type.type.name}
-	 <Link to={`/types/${type.type.name}`}>-></Link>
 	 </Col>
 	 
-	 })}
+})}
 
 
 
@@ -36,8 +35,6 @@ const PokemonDetail = (props) => {
 		<Row around="xs">
 		{props.pokemon ? mapTypesToDiv(props.pokemon.data.types) : "Cargando"}		
 		</Row>
-
-		<Link to="/">Volver</Link>
 
 		</div>
 	)
