@@ -12,23 +12,20 @@ const getPokemonId = (url,html) => {
 		}}).join("");
 
 	if(html)
-	return <h3>{`#${ID}`}</h3>;
+	return <h3 style={{marginLeft: "10px"}}className="activeNeon">{`#${ID}`}</h3>;
 	else
 	return ID;
 }
 
 
-
-
-
 const Pokemon = (props) => (
 	<div onClick={()=> props.onPokemonClick()} className="pokemon">
 		<div className="spriteContainer " 
-			style={{backgroundImage: "url(" + `../../../assets/images/pokemon/${getPokemonId(props.pokemon.url,false)}.png` + ")",
+			style={{backgroundImage: "url(" + `./../../../assets/images/pokemon/${getPokemonId(props.pokemon.url,false)}.png` + ")",
 			backgroundPosition: 'center'}}>
         </div>
             {getPokemonId(props.pokemon.url,true)}
-		<h3 className="continue" style={{textAlign: "center", marginLeft: "15px"}}> {props.pokemon.name}</h3>
+		<h3 className="continue pointer neon" style={{textAlign: "center", marginLeft: "15px"}}> {props.pokemon.name}</h3>
 
 	</div>
 )

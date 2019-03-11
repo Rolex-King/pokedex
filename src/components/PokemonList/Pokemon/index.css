@@ -1,6 +1,8 @@
 .pokemon {
+
 	display: flex;
 	background-color: yellow;
+	background-color: rgba(0, 0, 0, 0.3); 
 	border-radius: 32px 26px 26px 5px;
 	-moz-border-radius: 32px 26px 26px 26px;
 	-webkit-border-radius: 36px 26px 26px 36px;

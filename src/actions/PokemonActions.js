@@ -30,7 +30,6 @@ export const getPokemon = () => {
 export const getPokemonByName = name => {
 	return dispatch => {
 		return axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`).then(pokemon => {
-			console.log(pokemon);
 			store.dispatch(fetchOnePokemon(pokemon))
 		}).catch(error =>{
 			console.log(error);

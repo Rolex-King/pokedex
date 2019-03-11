@@ -15,7 +15,9 @@ const PokemonList = (props) => {
 
         return (
         	<div className="list">
-	            <h2>Lista de pokemones</h2>
+	        	<div>
+	       		  <h2 className="pokeTitle">Poke<span>Dex</span></h2>
+	        	</div>
 	            { props.pokemonList !== undefined ? pokemonComponents : <h2>Esta vacio</h2> }
             </div>
         );

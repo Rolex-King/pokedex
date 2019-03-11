@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //import { getPokemonById } from './../actions/PokemonActions';
 import PokemonDetail from './../components/PokemonDetail';
+//import Routes from './../routes.js';
+//import { Link } from 'react-router-dom'
+
+
 
 
 class PokemonListContainer extends Component {
@@ -13,7 +17,7 @@ class PokemonListContainer extends Component {
     render() {
         return (
         	<div className="continue">
-	           <PokemonDetail pokemon={this.props.pokemon}/>
+                 <PokemonDetail pokemon={this.props.pokemon}/>
             </div>
         );
     }
